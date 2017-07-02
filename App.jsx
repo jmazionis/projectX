@@ -1,5 +1,5 @@
 import React from "react";
-import CustomMenu from "./CustomMenu";
+import CustomButton from "./components/CustomButton";
 
 export default class App extends React.Component {
     render() {
@@ -7,7 +7,7 @@ export default class App extends React.Component {
             <div style={{ textAlign: "center" }}>
                 <h1>Hello World</h1>
                 <div>
-                    <CustomMenu />
+                    <CustomButton />
                 </div>
             </div>
         );
