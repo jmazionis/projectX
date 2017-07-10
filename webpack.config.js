@@ -1,5 +1,6 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const OpenBrowserPlugin = require("open-browser-webpack-plugin");
 
 module.exports = {
     entry: ["./index.js", "./styles/main.scss"],
@@ -42,5 +43,8 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx"]
     },
-    plugins: [new ExtractTextPlugin("style.css")]
+    plugins: [
+        new ExtractTextPlugin("style.css"),
+        new OpenBrowserPlugin({ url: "http://localhost:8080" })
+    ]
 };
